@@ -13,17 +13,20 @@ interface SolutionSectionProps {
     subheadline: string
     items: readonly { title: string; desc: string }[]
   }
+  hideHeader?: boolean
 }
 
-export function SolutionSection({ dict }: SolutionSectionProps) {
+export function SolutionSection({ dict, hideHeader }: SolutionSectionProps) {
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <Badge variant="outline" className="mb-4">{dict.badge}</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{dict.headline}</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">{dict.subheadline}</p>
-        </div>
+        {!hideHeader && (
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="mb-4">{dict.badge}</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{dict.headline}</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">{dict.subheadline}</p>
+          </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {dict.items.map((item, i) => {
             const Icon = icons[i]

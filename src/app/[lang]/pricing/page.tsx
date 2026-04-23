@@ -17,7 +17,7 @@ export default async function PricingPage({ params }: { params: Promise<{ lang: 
           <p className="text-muted-foreground text-lg">{dict.pricingPage.subheadline}</p>
         </div>
       </section>
-      <PricingSection lang={lang as Lang} dict={dict.pricing} />
+      <PricingSection lang={lang as Lang} dict={dict.pricing} hideHeader />
       <FAQSection dict={{ badge: "FAQ", headline: dict.pricingPage.faqHeadline, items: dict.pricingPage.faqItems }} />
       <FinalCTASection lang={lang as Lang} dict={dict.finalCta} />
     </>

@@ -32,8 +32,12 @@ export default function WaitlistPage({ params }: { params: Promise<{ lang: strin
     resolver: zodResolver(schema),
   })
 
-  const onSubmit = async (_data: FormData) => {
-    await new Promise((r) => setTimeout(r, 900))
+  const onSubmit = async (data: FormData) => {
+    await fetch("/api/waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
     setSubmitted(true)
   }
 

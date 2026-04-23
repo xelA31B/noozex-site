@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils"
 
 interface PricingSectionProps {
   lang: Lang
+  hideHeader?: boolean
   dict: {
     badge: string
     headline: string
@@ -27,15 +28,17 @@ interface PricingSectionProps {
   }
 }
 
-export function PricingSection({ lang, dict }: PricingSectionProps) {
+export function PricingSection({ lang, dict, hideHeader }: PricingSectionProps) {
   return (
     <section className="py-20 md:py-28 bg-muted/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <Badge variant="outline" className="mb-4">{dict.badge}</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{dict.headline}</h2>
-          <p className="text-muted-foreground">{dict.subheadline}</p>
-        </div>
+        {!hideHeader && (
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="mb-4">{dict.badge}</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{dict.headline}</h2>
+            <p className="text-muted-foreground">{dict.subheadline}</p>
+          </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {dict.plans.map((plan, i) => (
             <motion.div

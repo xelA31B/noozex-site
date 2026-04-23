@@ -8,10 +8,11 @@ import { CheckCircle, Circle, AlertTriangle, TrendingUp, Users, DollarSign, Zap,
 import { getDictionary, type Lang } from "@/lib/i18n"
 
 const riskCards = [
-  { label: "Market Risk", severity: "medium", color: "text-yellow-500", bg: "bg-yellow-500/10 border-yellow-500/20", desc: "Crowded SaaS market, differentiation needed" },
-  { label: "Competition Risk", severity: "high", color: "text-red-500", bg: "bg-red-500/10 border-red-500/20", desc: "Several established players with similar positioning" },
-  { label: "Monetization Risk", severity: "low", color: "text-green-500", bg: "bg-green-500/10 border-green-500/20", desc: "Clear B2C SaaS model, proven price points" },
-  { label: "Execution Risk", severity: "medium", color: "text-yellow-500", bg: "bg-yellow-500/10 border-yellow-500/20", desc: "Solo founder, limited resources for rapid scaling" },
+  { label: "Market Risk",       severity: "medium", color: "text-blue-500",   bg: "bg-blue-500/10 border-blue-500/20",     desc: "Crowded SaaS market, differentiation needed" },
+  { label: "Competition Risk",  severity: "high",   color: "text-purple-500", bg: "bg-purple-500/10 border-purple-500/20", desc: "Several established players with similar positioning" },
+  { label: "Problem Risk",      severity: "low",    color: "text-orange-500", bg: "bg-orange-500/10 border-orange-500/20", desc: "Clear pain point, founders actively seek validation tools" },
+  { label: "Monetization Risk", severity: "low",    color: "text-green-500",  bg: "bg-green-500/10 border-green-500/20",   desc: "Clear B2C SaaS model, proven price points" },
+  { label: "Execution Risk",    severity: "medium", color: "text-red-400",    bg: "bg-red-400/10 border-red-400/20",       desc: "Solo founder, limited resources for rapid scaling" },
 ]
 
 const tasks = [

@@ -18,7 +18,7 @@ export default async function ProductPage({ params }: { params: Promise<{ lang: 
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">{dict.solution.subheadline}</p>
         </div>
       </section>
-      <SolutionSection dict={dict.solution} />
+      <SolutionSection dict={dict.solution} hideHeader />
       <HowItWorksSection dict={dict.howItWorks} />
       <ScoringSection lang={lang as Lang} dict={dict.scoring} />
       <FinalCTASection lang={lang as Lang} dict={dict.finalCta} />
