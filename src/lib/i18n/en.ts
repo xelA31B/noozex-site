@@ -9,7 +9,7 @@ export const en = {
   },
   hero: {
     badge: "Now in early access",
-    headline: "Validate startup ideas before you waste months building the wrong thing",
+    headline: "Up to $1,000,000 in 6 months. Let's analyze your idea.",
     subheadline: "An AI decision and execution engine for founders: score ideas, map risks, test demand, and know exactly what to do next.",
     cta1: "Get Early Access",
     cta2: "See How It Works",
